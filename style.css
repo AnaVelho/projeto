@@ -26,6 +26,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -119,12 +120,12 @@ ul li a {
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
-text-decoration: none;
-font-weight: 500;
+  text-decoration: none;
+  font-weight: 500;
 
-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
 /* pseudo-selector */
@@ -163,5 +164,14 @@ ul li a:hover {
   font-size: 14px;
 }
 
+/* media queries */
+@media (min-widht: 700px) {
+  :root {
+    --bg-url: url(./assents/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assents/bg-mb-light.jpg);
+  }
+}
 
 
